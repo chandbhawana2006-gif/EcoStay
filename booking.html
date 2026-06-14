@@ -1,24 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Booking</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - EcoStay</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Booking Form</h1>
+    <header>
+        <h1>EcoStay Booking</h1>
+        <p>Reserve Your Eco-Friendly Homestay Experience</p>
+    </header>
 
-<form>
-<input type="text" placeholder="Name"><br><br>
+    <section>
+        <h2>Booking Form</h2>
 
-<input type="email" placeholder="Email"><br><br>
+        <form id="bookingForm">
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
-<input type="text" placeholder="Destination"><br><br>
+            <label for="email">Email Address</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-<input type="date"><br><br>
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
 
-<button>Book Now</button>
-</form>
+            <label for="destination">Destination</label><br>
+            <select id="destination" name="destination" required>
+                <option value="">Select Destination</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Goa">Goa</option>
+                <option value="Rajasthan">Rajasthan</option>
+            </select><br><br>
+
+            <label for="checkin">Check-In Date</label><br>
+            <input type="date" id="checkin" name="checkin" required><br><br>
+
+            <label for="checkout">Check-Out Date</label><br>
+            <input type="date" id="checkout" name="checkout" required><br><br>
+
+            <label for="guests">Number of Guests</label><br>
+            <input type="number" id="guests" name="guests" min="1" max="20" required><br><br>
+
+            <label for="message">Special Requests</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Any special requirements?"></textarea><br><br>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <p id="confirmationMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EcoStay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("confirmationMessage").innerHTML =
+                "✅ Thank you! Your booking request has been submitted successfully.";
+
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>
