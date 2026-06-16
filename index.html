@@ -12,9 +12,67 @@
         <h1>EcoStay</h1>
         <p>Discover Sustainable Homestays and Eco-Friendly Travel Experiences</p>
     </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section>class="images">
+        <img  src="https://www.homestaysofindia.com/wp-content/uploads/2024/07/Exterior-1-The-Cobblestone-Hideaway-Homestay-Rongli.jpg" width="900"alt="homestay image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT47ZdhApA_ZNd0DhN4hyjQm4GD9SPGniLsgA&s" width="900"alt="homestay image">
+        <img  src="https://c.ndtvimg.com/2026-04/d62687e8_travel_625x300_15_April_26.png?im=FeatureCrop,algorithm=dnn,width=1200,height=738" width="900" alt="homestay image">
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE2BAUU7jWgVzr4NG0b-lbyBep0bWQz4ZNUg&s," width="900"alt="eco tourism image">
+
+    </section>
+        
+    <main>
+        <body>
+
+    <header>
+        <h1>EcoStay</h1>
+        <p>Discover Sustainable Homestays and Eco-Friendly Travel Experiences</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <main>
 
+        <h1>OUR ROOMS </h1>
+        <div class="slideshow-container">
+            <img id="slide" src="images/room.jfif" width="500" height="450" alt="Room Image">
+        </div>
+
+       
+        </section>
+
+       
+
+    </main>
+
+    <script>
+        const images = [
+            "images/home.jfif",
+            "images/room.jfif",
+            "images/balcony.jpg",
+            "images/washroom.jfif" 
+        ];
+
+        let index = 0;
+
+        setInterval(function () {
+            index = (index + 1) % images.length;
+            document.getElementById("slide").src = images[index];
+        }, 3000);
+    </script>
+
+</body>
         <section class="about">
             <h2>About EcoStay</h2>
             <p>
